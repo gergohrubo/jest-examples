@@ -19,3 +19,8 @@ test('Checking boolean', () => {
 test('Checking boolean', () => {
   expect(functions.isTruthy(false)).toBeFalsy()
 })
+
+//Objects and arrays should use toEqual and not toBe because of reference type assignment
+test('Checking objects', () => {
+  expect(functions.returnObject({ isObject: true })).toEqual({ isObject: true })
+})
