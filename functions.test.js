@@ -24,3 +24,8 @@ test('Checking boolean', () => {
 test('Checking objects', () => {
   expect(functions.returnObject({ isObject: true })).toEqual({ isObject: true })
 })
+
+//Regex test
+test('There is no I in team', () => {
+  expect('team').not.toMatch(/I/i)
+})
