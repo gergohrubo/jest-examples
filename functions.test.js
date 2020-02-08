@@ -29,3 +29,8 @@ test('Checking objects', () => {
 test('There is no I in team', () => {
   expect('team').not.toMatch(/I/i)
 })
+
+//Arrays
+test('See what arrays contain', () => {
+  expect(['john', 'blabla', 'admin']).toContain('admin')
+})
