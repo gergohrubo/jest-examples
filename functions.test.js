@@ -3,6 +3,9 @@ const functions = require('./functions')
 beforeAll(() => console.log('A function that runs before the tests are launched'))
 afterAll(() => console.log('A function that runs after the tests finished'))
 
+beforeEach(() => console.log('A function that runs before EACH test is launched'))
+afterEach(() => console.log('A function that runs after EACH tests finishes'))
+
 test('Adds 2 + 2 to equal 4', () => {
   expect(functions.sum(2, 2)).toBe(4)
 })
