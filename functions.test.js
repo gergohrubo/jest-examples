@@ -6,6 +6,14 @@ afterAll(() => console.log('A function that runs after the tests finished'))
 beforeEach(() => console.log('A function that runs before EACH test is launched'))
 afterEach(() => console.log('A function that runs after EACH tests finishes'))
 
+//with the describe block we can assign beforeEach checks only to particular tests
+describe('Checking names', () => {
+  beforeEach(() => console.log('Checking names'))
+  test('Is it Gergo', () => {
+    expect('Gergo').toBe('Gergo')
+  })
+})
+
 test('Adds 2 + 2 to equal 4', () => {
   expect(functions.sum(2, 2)).toBe(4)
 })
